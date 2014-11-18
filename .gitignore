@@ -1,3 +1,8 @@
+# Meteor
+.npm
+versions.json
+.build*
+
 # Logs
 logs
 *.log
