@@ -1,11 +1,6 @@
-Tinytest.add 'mocha should exist', (test)->
-  expect(mocha).to.be.an 'object'
+googleTranslate = new practical.GoogleTranslate()
 
-Tinytest.add 'mocha.run should exist', (test)->
-  expect(mocha.run).to.be.a 'function'
-
-# Server side we need to wrap all bdd exports in fibers.
-# Not implemented yet.
-if Meteor.isClient
-  Tinytest.add 'describe should exist', (test)->
-    expect(describe).to.be.a 'function'
+Tinytest.add 'Google Translate - should translate text' , (test)->
+  translation = googleTranslate.translate("My name is Brandon", "es")
+  expect(translation).to.be.an("Object")
+  expect(translation.translatedText).to.equal("Mi nombre es Brandon")

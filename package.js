@@ -12,7 +12,7 @@ Package.onUse(function (api) {
 
   api.use('coffeescript');
   api.use('underscore');
-
+  api.use("practicalmeteor:loglevel@1.1.0_2");
   api.use(['practicalmeteor:loglevel@1.1.0_2', 'spacejamio:chai@1.9.2_2']);
 
   // Uncomment once we upgrade to loglevel v2, with package specific loggers
@@ -26,9 +26,10 @@ Package.onUse(function (api) {
 Package.onTest(function (api) {
   api.use([
     'coffeescript',
-    'practicalmeteor:google-translate@0.9.0-rc0',
+    'practicalmeteor:google-translate',
     'practicalmeteor:loglevel@1.1.0_2',
+    'spacejamio:chai',
     'tinytest']);
 
-  api.addFiles('tests/GoogleTranslateTest.coffee');
+  api.addFiles('tests/server/GoogleTranslateTest.coffee');
 });

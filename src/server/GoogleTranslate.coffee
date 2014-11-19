@@ -4,7 +4,7 @@ class practical.GoogleTranslate
 
   instance = null
 
-  @get:
+  @get: ->
     instance ?= new practical.GoogleTranslate()
 
   constructor: ->
@@ -15,3 +15,7 @@ class practical.GoogleTranslate
     @googleTranslate = Npm.require('google-translate')(apiKey)
 
   translate: (text)->
+
+
+
+
