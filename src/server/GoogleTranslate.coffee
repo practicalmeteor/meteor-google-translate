@@ -14,8 +14,9 @@ class practical.GoogleTranslate
       throw new Error('practicalmeteor:google-translate: Missing Meteor.settings.services.google.translate.apiKey')
     @googleTranslate = Npm.require('google-translate')(apiKey)
 
-  translate: (text)->
-
+  translate: (text,lang)->
+    translate = Meteor.wrapAsync(@googleTranslate.translate, @googleTranslate)
+    translate(text,lang)
 
 
 
