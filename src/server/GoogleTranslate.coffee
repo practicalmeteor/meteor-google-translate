@@ -20,3 +20,4 @@ class practical.GoogleTranslate
 
 
 
+@GoogleTranslate = practical.GoogleTranslate.get()
