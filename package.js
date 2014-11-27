@@ -13,7 +13,9 @@ Package.onUse(function (api) {
   api.use('coffeescript');
   api.use('underscore');
   api.use("practicalmeteor:loglevel@1.1.0_2");
-  api.use(['practicalmeteor:loglevel@1.1.0_2', 'spacejamio:chai@1.9.2_2']);
+  api.use(['practicalmeteor:loglevel@1.1.0_2', 'practicalmeteor:chai@1.9.2_3']);
+  api.use("spacejamio:underscore.string");
+
 
   // Uncomment once we upgrade to loglevel v2, with package specific loggers
   // api.addFiles('src/lib/log.js');
