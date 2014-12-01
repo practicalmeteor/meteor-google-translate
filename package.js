@@ -5,7 +5,7 @@ Package.describe({
   version: '0.9.0-rc0'
 });
 
-Npm.depends({'google-translate': '0.1.4'});
+Npm.depends({'googleapis': '1.0.21'});
 
 Package.onUse(function (api) {
   api.versionsFrom('0.9.3');
