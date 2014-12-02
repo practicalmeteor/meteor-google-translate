@@ -1,20 +1,20 @@
-@practical ?= {}
-
 gapi = Npm.require("googleapis")
+
+@practical ?= {}
 
 class practical.GoogleTranslate
 
   instance = null
-
+  serverApiKey: null
   @get: ->
     instance ?= new practical.GoogleTranslate()
-  apiKey = null
+
   constructor: ->
-    apiKey = Meteor.settings?.services?.google?.translate?.apiKey
-    if not apiKey
-      log.error('Missing Meteor.settings.services.google.translate.apiKey')
-      throw new Error('practicalmeteor:google-translate: Missing Meteor.settings.services.google.translate.apiKey')
-    @googleTranslate = gapi.translate({version:'v2', auth: apiKey})
+    @serverApiKey = Meteor.settings?.services?.google?.translate?.serverApiKey
+    if not @serverApiKey
+      log.error('Missing Meteor.settings.services.google.translate.serverApiKey')
+      throw new Error('practicalmeteor:google-translate: Missing Meteor.settings.services.google.translate.serverApiKey')
+    @googleTranslate = gapi.translate({version:'v2', auth: @serverApiKey})
 
 
   ###
@@ -33,4 +33,4 @@ class practical.GoogleTranslate
     translation = data.translations[0].translatedText
     return translation
 
-@GoogleTranslate = practical.GoogleTranslate.get()
+GoogleTranslate = practical.GoogleTranslate.get()
