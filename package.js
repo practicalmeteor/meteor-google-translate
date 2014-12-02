@@ -20,7 +20,7 @@ Package.onUse(function (api) {
     'src/server/GoogleTranslate.coffee'
   ], "server");
 
-  api.export('GoogleTranslate', 'server');
+  //api.export('GoogleTranslate', 'server');
 });
 
 Package.onTest(function (api) {

@@ -33,4 +33,4 @@ class practical.GoogleTranslate
     translation = data.translations[0].translatedText
     return translation
 
-GoogleTranslate = practical.GoogleTranslate.get()
+@GoogleTranslate = practical.GoogleTranslate.get()
