@@ -28,7 +28,7 @@ Package.onTest(function (api) {
     'coffeescript',
     'practicalmeteor:google-translate',
     'practicalmeteor:loglevel@1.1.0_2',
-    'spacejamio:chai',
+    'practicalmeteor:chai',
     'tinytest'], 'server');
 
   api.addFiles('tests/server/GoogleTranslateTest.coffee', 'server');
