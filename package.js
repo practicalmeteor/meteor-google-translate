@@ -11,7 +11,7 @@ Package.onUse(function (api) {
   api.versionsFrom('0.9.3');
 
   api.use('coffeescript', 'server');
-  api.use(['practicalmeteor:loglevel@1.2.0_1', 'practicalmeteor:chai@1.9.2_3'], 'server');
+  api.use(['practicalmeteor:loglevel@1.2.0_1', 'practicalmeteor:chai'], 'server');
 
   // Uncomment once we upgrade to loglevel v2, with package specific loggers
   // api.addFiles('src/lib/log.js');
