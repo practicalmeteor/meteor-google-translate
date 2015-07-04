@@ -17,6 +17,7 @@ Package.onUse(function (api) {
   // api.addFiles('src/lib/log.js');
 
   api.addFiles([
+    'src/lib/log.js',
     'src/server/GoogleTranslate.coffee'
   ], "server");
 
